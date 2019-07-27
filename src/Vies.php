@@ -43,7 +43,7 @@ class Vies
     /**
      * gets vat data
      * @param string $countryCode The member country code
-     * @param int|string $vatNumber The VAT number     *
+     * @param int|string $vatNumber The VAT number
      */
     public function checkVAT($countryCode, $vatNumber)
     {
