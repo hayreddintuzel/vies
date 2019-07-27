@@ -1,4 +1,4 @@
-<?php 
+<?php
 
 /*
  * (c) Hayreddin Tüzel <hayredintuzel@gmail.com>
@@ -11,7 +11,6 @@ namespace htuzel\Vies;
 
 use SoapClient;
 use SoapFault;
-use stdClass;
 
 class Vies
 {
@@ -43,19 +42,15 @@ class Vies
 
     /**
      * gets vat data
-     *
-     * @param int|string $vatNumber The VAT number
-     * @param string $countryCode The country code
-     *
-     * @return stdClass The VAT number's details.
+     * @param string $countryCode The member country code
+     * @param int|string $vatNumber The VAT number     *
      */
-    public function checkVAT($vatNumber, string $countryCode): stdClass
+    public function checkVAT($countryCode, $vatNumber)
     {
         try {
-            $aDetails = [
-                'vatNumber' => $sVatNumber
-            ];
-            return $this->oClient->matchCode($vatNumber);
+            $params = array('vatNumber' => $vatNumber, 'countryCode' => $countryCode);
+
+            return $this->vClient->checkVat($params);
         } catch (SoapFault $e) {
             sprintf($e);
         }
