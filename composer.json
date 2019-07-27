@@ -1,0 +1,19 @@
+{
+    "name": "htuzel/vies",
+    "description": "it is a simple vies soap client",
+    "type": "package",
+    "license": "mit",
+    "authors": [
+        {
+            "name": "Hayreddin Tüzel",
+            "email": "hayreddintuzel@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "autoload": {
+        "psr-4": {
+            "htuzel\\Vies\\": "src/"
+        }
+    },
+    "require": {}
+}
