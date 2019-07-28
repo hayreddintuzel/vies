@@ -1,8 +1,9 @@
 {
     "name": "htuzel/vies",
-    "description": "it is a simple vies soap client",
+    "description": "it is a simple Composer Package for validates VAT by using Vies Database",
     "type": "package",
     "license": "mit",
+    "keywords": ["vies", "vat", "soap"],
     "authors": [
         {
             "name": "Hayreddin Tüzel",
